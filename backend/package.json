@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Node JS Angular ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MedBG/itesoft.git"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "Mohamed Bouguerra - Acelys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MedBG/itesoft/issues"
+  },
+  "homepage": "https://github.com/MedBG/itesoft#readme",
+  "dependencies": {
+    "postgres": "^1.0.2"
+  }
+}
