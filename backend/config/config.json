@@ -1,0 +1,37 @@
+{
+    "development": {
+      "config_id": "development",
+      "app_name": "ITESOFT RESTful API",
+      "node_port": 8080,
+      "app_desc": "RESTful API with Node.js, Express, and PostgreSQL",
+      "json_indentation": 4,
+      "database": {
+        "user": "postgres",
+        "host": "localhost",
+        "database": "itesoft",
+        "password": "acelys",
+        "port": 5432
+      }
+      ,
+      "api": "http://localhost:8080/"
+    },
+    "testing": {
+      "config_id": "testing",
+      "database": "",
+      "api": "http://localhost:3000/"
+    },
+    "staging": {
+      "config_id": "staging",
+      "node_port": 8080,
+  
+      "database": "",
+      "api": "http://localhost:3000/"
+    },
+    "production": {
+      "config_id": "production",
+      "node_port": 8080,
+      "database": "",
+      "api": ""
+    }
+  }
+  
