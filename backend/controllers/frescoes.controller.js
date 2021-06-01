@@ -18,7 +18,7 @@ const getAllByAnneeCreationAsc = function(req, res){
 
 
 const deleteFersocoes = function(req, res){
-    res.send(frescoesService.deleteFersocoes(req.params.CODE_INSEE));
+    res.send(frescoesService.deleteFersocoes(req.params.ID));
 }
 
 module.exports = {

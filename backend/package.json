@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "npm test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,8 +24,13 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "jest": "^27.0.3",
     "lodash": "^4.17.21",
     "pg": "^8.6.0",
-    "postgres": "^1.0.2"
+    "postgres": "^1.0.2",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "supertest": "^6.1.3"
   }
 }

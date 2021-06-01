@@ -3,8 +3,8 @@ const data = require('../models/Frescoes');
 const fs = require('fs');
 const Frescoes = require('../models/Frescoes');
 
-const get = function(CODE_INSEE){
-    return getAll().find(frescoes => frescoes.CODE_INSEE == CODE_INSEE);
+const get = function(ID){
+    return getAll().find(frescoes => frescoes.ID == ID);
 }
 
 const getAll = function(){
@@ -33,11 +33,10 @@ const getAllByAnneeCreationAsc = function(){
       });
 }
 
-const deleteFersocoes = function(CODE_INSEE){
+const deleteFersocoes = function(ID){
     data.Frescoes = data.Frescoes.splice(frescoes =>        
-        frescoes.CODE_INSEE == CODE_INSEE);
-    
-    return "Object with CODE_INSEE "+ CODE_INSEE+ " was deleted";
+        frescoes.ID == ID, 1);
+    return {message:"Frescoes with CODE_INSEE "+ ID+ " was deleted"};
 }
 
 module.exports = {

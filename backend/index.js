@@ -16,6 +16,7 @@ app.use(bodyParser.json())
 
 
 app.use(cors());
+app.use(express.static(process.cwd()+"/dist/frontend/"));
 
 
 app.use((req, res, next) => {
@@ -38,11 +39,14 @@ app.use((req, res, next) => {
 
 app.use(routes);
 
-
+app.get('/', (req,res) => {
+  res.sendFile(process.cwd()+"/dist/frontend/index.html")
+});
 
 app.listen(configApp.node_port, () => {
     console.log(`${configApp.app_name} listening on port ${configApp.node_port}`);
 });
+
 
 
 module.exports = app;

@@ -18,7 +18,7 @@ router.route('/desc')
 router.route('/asc')
     .post(frescoesController.getAllByAnneeCreationAsc);
 
-router.route('/:CODE_INSEE')
+router.route('/:ID')
     .delete(frescoesController.deleteFersocoes);
 
 module.exports = router;
