@@ -1,5 +1,4 @@
 # Nuxt.js build / generate output
 .nuxt
-
-
+node_modules
 
