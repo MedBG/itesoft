@@ -51,9 +51,13 @@ L'application démarre sur le port 8080.
 
   
 ### Test
+
 **Node Js**
+
 * `npx jest` pour lancer le test
 * Le fichier `frescoes.test.js` contient les différents test sur les appels **RESTful** des commentaires étaient mise en place pour plus de détails
+
 **Angular**
+
 * `ng test` pour lancer le test
 * Le fichier `frescoes.service.spec.js` contient les différents test sur les appels **RESTful** des commentaires étaient mise en place pour plus de détails
