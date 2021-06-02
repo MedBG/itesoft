@@ -1,0 +1,38 @@
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+					<div class="profile-card card rounded-lg shadow p-4 p-xl-5 mb-4 text-center position-relative overflow-hidden">
+						<div class="banner"></div>
+						<img src={{fromPage.PHOTO}} alt="" class="img-circle mx-auto mb-3">
+						<h3 class="mb-4">{{fromPage.CATEGORIE}}</h3>
+						<div class="text-left mb-4">
+							<p class="mb-2"><i class="fa fa-envelope mr-2"></i> {{fromPage.ID}}</p>
+							<p class="mb-2"><i class="fa fa-phone mr-2"></i> {{fromPage.PROPRIETAIRE}}</p>
+							<p class="mb-2"><i class="fa fa-globe mr-2"></i> {{fromPage.MNEMO}}</p>
+							<p class="mb-2"><i class="fa fa-map-marker-alt mr-2"></i> {{fromPage.NOM_RUE}}</p>
+              <p class="mb-2"><i class="fa fa-map-marker-alt mr-2"></i> {{fromPage.COMMENTAIRE}}</p>
+						</div>
+            <ngui-map height="50px" width="50px" center={{center}}></ngui-map>
+
+						<div class="social-links d-flex justify-content-center">
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+    <div class="alert alert-primary" role="alert" *ngIf="alertMsg">
+      {{message}}
+    </div>
+
+
+  <footer id="modal-footer">
+      <button mat-raised-button id="modal-action-button" (click)="deleteFrescoes(fromPage.ID)">Delete</button>
+      <button mat-raised-button id="modal-cancel-button" (click)="closeModal()">Go back</button>
+  </footer>

@@ -1,0 +1,35 @@
+<div class="container">
+
+  <ng-container *ngIf="frescoes$ | async as result" [ngSwitch]="result.dataState">
+    <ng-container *ngSwitchCase="DataStateEnum.LOADING">
+      Loading....
+    </ng-container>
+    <ng-container *ngSwitchCase="DataStateEnum.ERROR">
+      <div class="alert-danger">
+        {{result.errorMessage}}
+      </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+      <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let f of result.data">
+          <div class="picsum-img-wrapper">
+            <img height="400px" width="300px" src={{f.PHOTO}} alt="Angular Carousel 1">
+          </div>
+          <div class="carousel-caption">
+            <h3>{{f.PROPRIETAIRE}}</h3>
+            <p>{{f.MNEMO}}</p>
+            <button mat-raised-button id="detail-button" (click)="openModal(f)" type="button"
+              class="btn btn-outline-primary">SHOW DETAILS</button>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+
+      <button mat-raised-button id="modal-cancel-button" id="modal-action-button" (click)="onGetAllDesc()"><i
+          class="fa fa-arrow-down">YEAR</i> </button>
+      <button mat-raised-button id="modal-cancel-button" style="margin-left: 30px;" id="modal-action-button"
+        (click)="onGetAllAsc()"><i class="fa fa-arrow-up">YEAR</i> </button>
+
+
+    </ng-container>
+  </ng-container>
+</div>
